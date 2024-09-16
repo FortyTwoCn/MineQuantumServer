@@ -4,6 +4,7 @@ about: 龙之进化魔改方案征集
 ---
 魔改奖励：
 参加给5000金币；入选给10000金币
+时间截止到10月6号
 
 魔改示例：
 ![fc4da233c64d1f1fbf2795c75f55e17e](https://github.com/user-attachments/assets/adaba4b9-e817-4263-9f83-9dbd8ea2bdc8)
