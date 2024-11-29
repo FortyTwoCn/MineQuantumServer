@@ -1,0 +1,20 @@
+
+//液体写法
+"E": {
+      "type": "astralsorcery:fluid",
+      "fluid": [
+        {
+          "fluid": "astralsorcery:liquid_starlight",
+          "amount": 1000
+        }
+      ]
+    }
+
+//水晶写法
+      D: {
+        type: 'astralsorcery:crystal',              // D代表的物品类型（水晶）
+        hasToBeAttuned: true,                       // 必须是调和过的水晶
+        hasToBeCelestial: false,                    // 不能是天体水晶
+        canBeAttuned: false,                        // 不能调和
+        canBeCelestialCrystal: false                // 不能是天体水晶
+      }
