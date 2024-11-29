@@ -28,5 +28,5 @@ onEvent('recipes', event => {
         },
          //损耗率 20%
         "loss_rate": 20
-          });
+     });
 });
