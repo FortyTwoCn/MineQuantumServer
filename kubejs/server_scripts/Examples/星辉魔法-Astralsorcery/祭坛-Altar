@@ -1,0 +1,153 @@
+//星辉合成台
+//原版数据包
+{
+  "type": "astralsorcery:altar",
+  "altar_type": 0,
+  "duration": 100,
+  "starlight": 100,
+  "pattern": [
+    "_____",
+    "__B__",
+    "_ACA_",
+    "__A__",
+    "_____"
+  ],
+  "key": {
+    "A": {
+      "item": "astralsorcery:aquamarine"
+    },
+    "B": {
+      "item": "astralsorcery:parchment"
+    },
+    "C": {
+      "item": "minecraft:book"
+    }
+  },
+  "output": [
+    {
+      "item": "astralsorcery:tome",
+      "count": 1
+    }
+  ],
+  "effects": [
+    "astralsorcery:built_in_effect_discovery_central_beam"
+  ]
+}
+
+//kubejs版
+onEvent('recipes', event => {
+  event.custom({
+    type: 'astralsorcery:altar',
+    altar_type: 0,                     // 祭坛类型
+    duration: 100,                     // 持续时间
+    starlight: 100,                    // 需要的星能
+    pattern: [
+      '_____',
+      '__B__',
+      '_ACA_',
+      '__A__',
+      '_____'
+    ],                                  // 祭坛图案
+    key: {
+      A: {
+        item: 'astralsorcery:aquamarine'  // A代表的物品
+      },
+      B: {
+        item: 'astralsorcery:parchment'   // B代表的物品
+      },
+      C: {
+        item: 'minecraft:book'            // C代表的物品
+      }
+    },
+    output: [
+      {
+        item: 'astralsorcery:tome',       // 输出物品
+        count: 1                          // 输出数量
+      }
+    ],
+    effects: [
+      'astralsorcery:built_in_effect_discovery_central_beam'  // 祭坛特效不要改
+    ]
+  })
+})
+
+//星辉祭坛
+//原版数据包
+{
+  "type": "astralsorcery:altar",
+  "altar_type": 1,
+  "duration": 200,
+  "starlight": 800,
+  "pattern": [
+    "_____",
+    "__B__",
+    "_CDC_",
+    "_AAA_",
+    "_____"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:rods/wooden"
+    },
+    "B": {
+      "item": "astralsorcery:hand_telescope"
+    },
+    "C": {
+      "tag": "forge:ingots/gold"
+    },
+    "D": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "output": [
+    {
+      "item": "astralsorcery:telescope",
+      "count": 1
+    }
+  ],
+  "effects": [
+    "astralsorcery:built_in_effect_discovery_central_beam",
+    "astralsorcery:built_in_effect_attunement_sparkle"
+  ]
+}
+
+//kubejs合成
+onEvent('recipes', event => {
+  event.custom({
+    type: 'astralsorcery:altar',
+    altar_type: 1,                     // 祭坛类型
+    duration: 200,                     // 持续时间
+    starlight: 800,                    // 需要的星能
+    pattern: [
+      '_____',
+      '__B__',
+      '_CDC_',
+      '_AAA_',
+      '_____'
+    ],                                  // 祭坛图案
+    key: {
+      A: {
+        tag: 'forge:rods/wooden'        // A代表的物品标签（木棍）
+      },
+      B: {
+        item: 'astralsorcery:hand_telescope'  // B代表的物品（手持望远镜）
+      },
+      C: {
+        tag: 'forge:ingots/gold'        // C代表的物品标签（金锭）
+      },
+      D: {
+        tag: 'minecraft:planks'         // D代表的物品标签（木板）
+      }
+    },
+    output: [
+      {
+        item: 'astralsorcery:telescope', // 输出物品（望远镜）
+        count: 1                          // 输出数量
+      }
+    ],
+    effects: [
+      'astralsorcery:built_in_effect_discovery_central_beam',  // 祭坛特效勿动
+      'astralsorcery:built_in_effect_attunement_sparkle'      
+    ]
+  })
+})
