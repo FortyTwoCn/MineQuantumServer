@@ -14,7 +14,7 @@
     //损耗率 20%
   "loss_rate": 20
 }
-
+//使用kubejs
 onEvent('recipes', event => {
     event.custom({
         type: "pneumaticcraft:explosion_crafting",
