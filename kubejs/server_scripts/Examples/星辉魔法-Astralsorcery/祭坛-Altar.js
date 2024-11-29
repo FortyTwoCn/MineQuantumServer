@@ -158,42 +158,46 @@ onEvent('recipes', event => {
   "type": "astralsorcery:altar",
   "altar_type": 2,
   "duration": 400,
-  "starlight": 2600,
+  "starlight": 1200,
   "pattern": [
-    "AB_BA",
-    "C___C",
-    "__D__",
-    "C___C",
-    "AB_BA"
+    "_____",
+    "ABCBA",
+    "_DED_",
+    "AFFFA",
+    "AD_DA"
   ],
   "key": {
     "A": {
-      "tag": "astralsorcery:stardust"
+      "item": "astralsorcery:marble_pillar"
     },
     "B": {
-      "item": "astralsorcery:illumination_powder"
+      "item": "astralsorcery:aquamarine"
     },
     "C": {
-      "item": "astralsorcery:resonating_gem"
+      "tag": "astralsorcery:starmetal"
     },
     "D": {
-      "type": "astralsorcery:crystal",
-      "hasToBeAttuned": true,
-      "hasToBeCelestial": false,
-      "canBeAttuned": false,
-      "canBeCelestialCrystal": false
+      "tag": "forge:ingots/gold"
+    },
+    "E": {
+      "type": "astralsorcery:fluid",
+      "fluid": [
+        {
+          "fluid": "astralsorcery:liquid_starlight",
+          "amount": 1000
+        }
+      ]
+    },
+    "F": {
+      "item": "astralsorcery:marble_runed"
     }
   },
-  "recipe_class": "astralsorcery:constellation_copy_stats",
   "output": [
     {
-      "item": "astralsorcery:rock_collector_crystal",
+      "item": "astralsorcery:infuser",
       "count": 1
     }
   ],
-  "options": {
-    "constellationSlot": 12
-  },
   "effects": [
     "astralsorcery:built_in_effect_constellation_finish",
     "astralsorcery:built_in_effect_discovery_central_beam",
@@ -208,45 +212,200 @@ onEvent('recipes', event => {
     type: 'astralsorcery:altar',
     altar_type: 2,                     // 祭坛类型
     duration: 400,                     // 持续时间
-    starlight: 2600,                    // 需要的星光
+    starlight: 1200,                    // 需要的星光
     pattern: [
-      'AB_BA',
-      'C___C',
-      '__D__',
-      'C___C',
-      'AB_BA'
+      '_____',
+      'ABCBA',
+      '_DED_',
+      'AFFFA',
+      'AD_DA'
     ],                                  // 祭坛图案
     key: {
       A: {
-        tag: 'astralsorcery:stardust'    // A代表的物品标签（星尘）
+        item: 'astralsorcery:marble_pillar'  // A代表的物品（大理石柱）
       },
       B: {
-        item: 'astralsorcery:illumination_powder'  // B代表的物品（照明粉）
+        item: 'astralsorcery:aquamarine'     // B代表的物品（海蓝宝石）
       },
       C: {
-        item: 'astralsorcery:resonating_gem'      // C代表的物品（共鸣宝石）
+        tag: 'astralsorcery:starmetal'      // C代表的物品标签（星铁）
       },
       D: {
-        type: 'astralsorcery:crystal',              // D代表的物品类型（水晶）
-        hasToBeAttuned: true,                       // 必须是调和过的水晶
-        hasToBeCelestial: false,                    // 不能是天体水晶
-        canBeAttuned: false,                        // 不能调和
-        canBeCelestialCrystal: false                // 不能是天体水晶
+        tag: 'forge:ingots/gold'            // D代表的物品标签（黄金锭）
+      },
+      E: {
+        type: 'astralsorcery:fluid',        // E代表流体
+        fluid: [
+          {
+            fluid: 'astralsorcery:liquid_starlight',  // 流体（星光液体）
+            amount: 1000                          // 流体数量（1000mb）
+          }
+        ]
+      },
+      F: {
+        item: 'astralsorcery:marble_runed'   // F代表的物品（符文大理石）
       }
     },
-    recipe_class: 'astralsorcery:constellation_copy_stats',  // 配方类
     output: [
       {
-        item: 'astralsorcery:rock_collector_crystal', // 输出物品（岩石采集水晶）
-        count: 1                                      // 输出数量
+        item: 'astralsorcery:infuser',     // 输出物品（注入器）
+        count: 1                            // 输出数量
       }
     ],
-    options: {
-      constellationSlot: 12   // 星座槽位
-    },
     effects: [
       'astralsorcery:built_in_effect_constellation_finish',   // 完成星座的效果
       'astralsorcery:built_in_effect_discovery_central_beam',  // 星座发现效果
+      'astralsorcery:altar_default_sparkle',                   // 祭坛默认的闪光效果
+      'astralsorcery:built_in_effect_constellation_lines',     // 星座连线效果
+      'astralsorcery:built_in_effect_attunement_sparkle'       // 调和闪光效果
+    ]
+  })
+})
+
+
+//五彩祭坛
+//我的世界原版数据包
+{
+  "type": "astralsorcery:altar",
+  "altar_type": 3,
+  "duration": 600,
+  "starlight": 3200,
+  "pattern": [
+    "__ABC",
+    "_ABDB",
+    "ABCBA",
+    "E_BA_",
+    "EEE__"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:nuggets/gold"
+    },
+    "B": {
+      "item": "astralsorcery:marble_runed"
+    },
+    "C": {
+      "item": "astralsorcery:glass_lens"
+    },
+    "D": {
+      "item": "astralsorcery:infused_glass"
+    },
+    "E": {
+      "tag": "forge:ingots/gold"
+    }
+  },
+  "output": [
+    {
+      "item": "astralsorcery:observatory",
+      "count": 1
+    }
+  ],
+  "focus_constellation": "astralsorcery:lucerna",
+  "relay_inputs": [
+    {
+      "item": "astralsorcery:illumination_powder"
+    },
+    {
+      "item": "astralsorcery:nocturnal_powder"
+    },
+    {
+      "item": "astralsorcery:illumination_powder"
+    },
+    {
+      "tag": "astralsorcery:stardust"
+    },
+    {
+      "item": "astralsorcery:illumination_powder"
+    },
+    {
+      "item": "astralsorcery:nocturnal_powder"
+    },
+    {
+      "item": "astralsorcery:illumination_powder"
+    },
+    {
+      "tag": "astralsorcery:stardust"
+    }
+  ],
+  "effects": [
+    "astralsorcery:built_in_effect_constellation_finish",
+    "astralsorcery:built_in_effect_trait_relay_highlight",
+    "astralsorcery:built_in_effect_discovery_central_beam",
+    "astralsorcery:built_in_effect_trait_focus_circle",
+    "astralsorcery:altar_default_sparkle",
+    "astralsorcery:built_in_effect_constellation_lines",
+    "astralsorcery:built_in_effect_attunement_sparkle"
+  ]
+}
+//kubejs格式
+onEvent('recipes', event => {
+  event.custom({
+    type: 'astralsorcery:altar',
+    altar_type: 3,                     // 祭坛类型
+    duration: 600,                     // 持续时间
+    starlight: 3200,                    // 需要的星光
+    pattern: [
+      '__ABC',
+      '_ABDB',
+      'ABCBA',
+      'E_BA_',
+      'EEE__'
+    ],                                  // 祭坛图案
+    key: {
+      A: {
+        tag: 'forge:nuggets/gold'       // A代表的物品标签（黄金金块）
+      },
+      B: {
+        item: 'astralsorcery:marble_runed'  // B代表的物品（符文大理石）
+      },
+      C: {
+        item: 'astralsorcery:glass_lens'   // C代表的物品（玻璃透镜）
+      },
+      D: {
+        item: 'astralsorcery:infused_glass' // D代表的物品（注入玻璃）
+      },
+      E: {
+        tag: 'forge:ingots/gold'          // E代表的物品标签（黄金锭）
+      }
+    },
+    output: [
+      {
+        item: 'astralsorcery:observatory',  // 输出物品（天文台）
+        count: 1                            // 输出数量
+      }
+    ],
+    focus_constellation: 'astralsorcery:lucerna',  // 聚焦星座（Lucerna）
+    relay_inputs: [
+      {
+        item: 'astralsorcery:illumination_powder'  // 输入物品（照明粉）
+      },
+      {
+        item: 'astralsorcery:nocturnal_powder'    // 输入物品（夜间粉末）
+      },
+      {
+        item: 'astralsorcery:illumination_powder'  // 输入物品（照明粉）
+      },
+      {
+        tag: 'astralsorcery:stardust'             // 输入标签（星尘）
+      },
+      {
+        item: 'astralsorcery:illumination_powder'  // 输入物品（照明粉）
+      },
+      {
+        item: 'astralsorcery:nocturnal_powder'    // 输入物品（夜间粉末）
+      },
+      {
+        item: 'astralsorcery:illumination_powder'  // 输入物品（照明粉）
+      },
+      {
+        tag: 'astralsorcery:stardust'             // 输入标签（星尘）
+      }
+    ],
+    effects: [
+      'astralsorcery:built_in_effect_constellation_finish',    // 完成星座的效果
+      'astralsorcery:built_in_effect_trait_relay_highlight',   // 特质传送高亮效果
+      'astralsorcery:built_in_effect_discovery_central_beam',  // 星座发现效果
+      'astralsorcery:built_in_effect_trait_focus_circle',      // 聚焦圆环效果
       'astralsorcery:altar_default_sparkle',                   // 祭坛默认的闪光效果
       'astralsorcery:built_in_effect_constellation_lines',     // 星座连线效果
       'astralsorcery:built_in_effect_attunement_sparkle'       // 调和闪光效果
