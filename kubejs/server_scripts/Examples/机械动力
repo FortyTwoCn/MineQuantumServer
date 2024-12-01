@@ -10,11 +10,11 @@
 可以有液体输出，只要有其他物品输出
 支持基于几率的输出
 ServerEvents.recipes(event => {
-  event.recipes.create.compacting('minecraft:diamond', 'minecraft:coal_block')
-  event.recipes.create.compacting('minecraft:diamond', 'minecraft:coal_block').heated()
-  event.recipes.create.compacting('minecraft:diamond', 'minecraft:coal_block').superheated()
-  event.recipes.create.compacting([Fluid.water(10), 'minecraft:dead_bush'], ['#minecraft:saplings', '#minecraft:saplings'])
-  event.recipes.create.compacting(['minecraft:diamond', Item.of('minecraft:diamond').withChance(0.3)], 'minecraft:coal_block')
+  event.recipes.create.compacting('minecraft:diamond', 'minecraft:coal_block') // 压缩煤块生成钻石
+  event.recipes.create.compacting('minecraft:diamond', 'minecraft:coal_block').heated() // 在加热条件下压缩煤块生成钻石
+  event.recipes.create.compacting('minecraft:diamond', 'minecraft:coal_block').superheated() // 在超加热条件下压缩煤块生成钻石
+  event.recipes.create.compacting([Fluid.water(10), 'minecraft:dead_bush'], ['#minecraft:saplings', '#minecraft:saplings']) // 混合两种树苗生成水和枯枝
+  event.recipes.create.compacting(['minecraft:diamond', Item.of('minecraft:diamond').withChance(0.3)], 'minecraft:coal_block') // 通过煤块压缩有30%概率生成钻石
 })
 粉碎 (Crushing)
 语法: crushing(output[], input)
@@ -26,9 +26,9 @@ ServerEvents.recipes(event => {
 支持多个基于几率的输出
 支持 .processingTime()
 ServerEvents.recipes(event => {
-  event.recipes.create.crushing('minecraft:diamond', 'minecraft:coal_block')
-  event.recipes.create.crushing('minecraft:diamond', 'minecraft:coal_block').processingTime(500)
-  event.recipes.create.crushing(['minecraft:diamond', Item.of('minecraft:diamond').withChance(0.5)], 'minecraft:coal_block')
+  event.recipes.create.crushing('minecraft:diamond', 'minecraft:coal_block') // 粉碎煤块生成钻石
+  event.recipes.create.crushing('minecraft:diamond', 'minecraft:coal_block').processingTime(500) // 粉碎煤块生成钻石，处理时间为500
+  event.recipes.create.crushing(['minecraft:diamond', Item.of('minecraft:diamond').withChance(0.5)], 'minecraft:coal_block') // 粉碎煤块，有50%概率生成钻石
 })
 切割 (Cutting)
 语法: cutting(output[], input)
@@ -40,9 +40,9 @@ ServerEvents.recipes(event => {
 支持多个基于几率的输出
 支持 .processingTime()
 ServerEvents.recipes(event => {
-  event.recipes.create.cutting('minecraft:diamond', 'minecraft:coal_block')
-  event.recipes.create.cutting('minecraft:diamond', 'minecraft:coal_block').processingTime(500)
-  event.recipes.create.cutting(['minecraft:diamond', Item.of('minecraft:diamond').withChance(0.5)], 'minecraft:coal_block')
+  event.recipes.create.cutting('minecraft:diamond', 'minecraft:coal_block') // 切割煤块生成钻石
+  event.recipes.create.cutting('minecraft:diamond', 'minecraft:coal_block').processingTime(500) // 切割煤块生成钻石，处理时间为500
+  event.recipes.create.cutting(['minecraft:diamond', Item.of('minecraft:diamond').withChance(0.5)], 'minecraft:coal_block') // 切割煤块，有50%概率生成钻石
 })
 部署 (Deploying)
 语法: deploying(output[], input[])
@@ -55,9 +55,9 @@ ServerEvents.recipes(event => {
 需要正好两个输入，第一个是输入物品，第二个是部署器持有的物品
 支持 .keepHeldItem()
 ServerEvents.recipes(event => {
-  event.recipes.create.deploying('minecraft:diamond', ['minecraft:coal_block', 'minecraft:sand'])
-  event.recipes.create.deploying(['minecraft:diamond', 'minecraft:emerald'], ['minecraft:coal_block', 'minecraft:sand']).keepHeldItem()
-  event.recipes.create.deploying(['minecraft:diamond', Item.of('minecraft:diamond').withChance(0.5)], ['minecraft:coal_block', 'minecraft:sand'])
+  event.recipes.create.deploying('minecraft:diamond', ['minecraft:coal_block', 'minecraft:sand']) // 用沙子和煤块通过部署器生成钻石
+  event.recipes.create.deploying(['minecraft:diamond', 'minecraft:emerald'], ['minecraft:coal_block', 'minecraft:sand']).keepHeldItem() // 用沙子和煤块通过部署器生成钻石和绿宝石，保持部署器的物品
+  event.recipes.create.deploying(['minecraft:diamond', Item.of('minecraft:diamond').withChance(0.5)], ['minecraft:coal_block', 'minecraft:sand']) // 用沙子和煤块通过部署器生成钻石，有50%几率
 })
 清空 (Emptying)
 语法: emptying(output[], input)
@@ -68,7 +68,7 @@ ServerEvents.recipes(event => {
 
 需要一个输入和两个输出，输出必须是物品和液体。
 ServerEvents.recipes(event => {
-  event.recipes.create.emptying([Fluid.water(), 'minecraft:bucket'], 'minecraft:water_bucket')
+  event.recipes.create.emptying([Fluid.water(), 'minecraft:bucket'], 'minecraft:water_bucket') // 从水桶中排出水并放入普通桶中
 })
 填充 (Filling)
 语法: filling(output, input[])
@@ -79,7 +79,7 @@ ServerEvents.recipes(event => {
 
 需要两个输入和一个输出，输入必须是物品和液体。
 ServerEvents.recipes(event => {
-  event.recipes.create.filling('minecraft:water_bucket', [Fluid.water(), 'minecraft:bucket'])
+  event.recipes.create.filling('minecraft:water_bucket', [Fluid.water(), 'minecraft:bucket']) // 使用水桶和水填充生成水桶
 })
 鬼火 (Haunting)
 语法: haunting(output[], input)
@@ -90,9 +90,9 @@ ServerEvents.recipes(event => {
 
 支持多个基于几率的输出
 ServerEvents.recipes(event => {
-  event.recipes.create.haunting('minecraft:soul_campfire', 'minecraft:campfire')
-  event.recipes.create.haunting(['minecraft:wheat', 'minecraft:oak_sapling'], 'minecraft:potato')
-  event.recipes.create.haunting(['minecraft:wheat', Item.of('minecraft:oak_sapling').withChance(0.2)], 'minecraft:potato')
+  event.recipes.create.haunting('minecraft:soul_campfire', 'minecraft:campfire') // 将普通篝火转换为灵魂篝火
+  event.recipes.create.haunting(['minecraft:wheat', 'minecraft:oak_sapling'], 'minecraft:potato') // 用小麦和橡木树苗生成土豆
+  event.recipes.create.haunting(['minecraft:wheat', Item.of('minecraft:oak_sapling').withChance(0.2)], 'minecraft:potato') // 用小麦和橡木树苗生成土豆，有20%几率
 })
 机械合成 (Mechanical Crafting)
 语法: mechanical_crafting(output, pattern[], key{})
@@ -111,7 +111,7 @@ ServerEvents.recipes(event => {
     'D   D',
     ' DDD '
   ], {
-    D: 'minecraft:dirt'
+    D: 'minecraft:dirt' // 通过泥土合成绿宝石
   })
 })
 磨粉 (Milling)
@@ -123,9 +123,9 @@ ServerEvents.recipes(event => {
 
 支持多个基于几率的输出
 ServerEvents.recipes(event => {
-  event.recipes.create.milling('minecraft:diamond', 'minecraft:coal_block')
-  event.recipes.create.milling(['minecraft:diamond', 'minecraft:emerald'], 'minecraft:coal_block')
-  event.recipes.create.milling(['minecraft:diamond', Item.of('minecraft:diamond').withChance(0.5)], 'minecraft:coal_block')
+  event.recipes.create.milling('minecraft:diamond', 'minecraft:coal_block') // 磨煤块生成钻石
+  event.recipes.create.milling(['minecraft:diamond', 'minecraft:emerald'], 'minecraft:coal_block') // 磨煤块生成钻石和绿宝石
+  event.recipes.create.milling(['minecraft:diamond', Item.of('minecraft:diamond').withChance(0.5)], 'minecraft:coal_block') // 磨煤块，有50%几率生成钻石
 })
 混合 (Mixing)
 语法: mixing(output[], input[])
@@ -138,11 +138,11 @@ ServerEvents.recipes(event => {
 支持液体输入和输出
 支持 .heated() 和 .superheated()
 ServerEvents.recipes(event => {
-  event.recipes.create.mixing('minecraft:diamond', 'minecraft:coal_block')
-  event.recipes.create.mixing('minecraft:diamond', 'minecraft:coal_block').heated()
-  event.recipes.create.mixing('minecraft:diamond', 'minecraft:coal_block').superheated()
-  event.recipes.create.mixing([Fluid.water(10), 'minecraft:dead_bush'], ['#minecraft:saplings', '#minecraft:saplings'])
-  event.recipes.create.mixing(['minecraft:diamond', Item.of('minecraft:diamond').withChance(0.3)], 'minecraft:coal_block')
+  event.recipes.create.mixing('minecraft:diamond', 'minecraft:coal_block') // 混合煤块生成钻石
+  event.recipes.create.mixing('minecraft:diamond', 'minecraft:coal_block').heated() // 加热混合煤块生成钻石
+  event.recipes.create.mixing('minecraft:diamond', 'minecraft:coal_block').superheated() // 超加热混合煤块生成钻石
+  event.recipes.create.mixing([Fluid.water(10), 'minecraft:dead_bush'], ['#minecraft:saplings', '#minecraft:saplings']) // 两种树苗混合生成水和枯枝
+  event.recipes.create.mixing(['minecraft:diamond', Item.of('minecraft:diamond').withChance(0.3)], 'minecraft:coal_block') // 用煤块混合，有30%几率生成钻石
 })
 压制 (Pressing)
 语法: pressing(output[], input)
@@ -153,32 +153,33 @@ ServerEvents.recipes(event => {
 
 支持多个基于几率的输出
 ServerEvents.recipes(event => {
-  event.recipes.create.pressing('minecraft:diamond', 'minecraft:coal_block')
-  event.recipes.create.pressing(['minecraft:diamond', 'minecraft:emerald'], 'minecraft:coal_block')
-  event.recipes.create.pressing(['minecraft:diamond', Item.of('minecraft:diamond').withChance(0.5)], 'minecraft:coal_block')
+  event.recipes.create.pressing('minecraft:diamond', 'minecraft:coal_block') // 压制煤块生成钻石
+  event.recipes.create.pressing(['minecraft:diamond', 'minecraft:emerald'], 'minecraft:coal_block') // 压制煤块生成钻石和绿宝石
+  event.recipes.create.pressing(['minecraft:diamond', Item.of('minecraft:diamond').withChance(0.5)], 'minecraft:coal_block') // 压制煤块，有50%几率生成钻石
 })
 砂纸抛光 (Sandpaper Polishing)
 语法: sandpaper_polishing(output, input)
 
-砂纸抛光使用任何带有 create:sandpaper 标签的物品。
+砂纸抛光使用任何标记为 create:sandpaper 的物品。
 
 特点：
 
 支持基于几率的输出
 ServerEvents.recipes(event => {
-  event.recipes.create.sandpaper_polishing('minecraft:diamond', 'minecraft:coal_block')
-  event.recipes.create.sandpaper_polishing(Item.of('minecraft:diamond').withChance(0.5), 'minecraft:coal_block')
+  event.recipes.create.sandpaper_polishing('minecraft:diamond', 'minecraft:coal_block') // 用砂纸抛光煤块生成钻石
+  event.recipes.create.sandpaper_polishing(Item.of('minecraft:diamond').withChance(0.5), 'minecraft:coal_block') // 用砂纸抛光煤块，有50%几率生成钻石
 })
-顺序装配 (Sequenced Assembly)
+序列装配 (Sequenced Assembly)
 语法: sequenced_assembly(output[], input, sequence[]).transitionalItem(item).loops(int)
 
-顺序装配输出为物品或物品数组。如果是数组：
+序列装配使用多个配方进行逐步合成。
 
-第一个物品是实际输出，剩余的物品为废料。
-过渡物品是装配过程中的中间物品。
+特点：
 
+输出是物品或物品数组
+可以设置过渡物品和循环次数
 ServerEvents.recipes(event => {
-	event.recipes.create.sequenced_assembly([
+	event.recipes.create.sequenced_assembly([ // 配方的输出项目
 		Item.of('create:precision_mechanism').withChance(130.0),
 		Item.of('create:golden_sheet').withChance(8.0),
 		Item.of('create:andesite_alloy').withChance(8.0),
@@ -188,26 +189,23 @@ ServerEvents.recipes(event => {
 		Item.of('2x minecraft:gold_nugget').withChance(2.0),
 		'minecraft:iron_ingot',
 		'minecraft:clock'
-	], 'create:golden_sheet', [
+	], 'create:golden_sheet', [ // 'create:golden_sheet' 是输入
 		event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:cogwheel']),
 		event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:large_cogwheel']),
-		event.recipes.createDeploying('create
-:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'minecraft:iron_nugget']) ]).transitionalItem('create:incomplete_precision_mechanism').loops(5) })
+		event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'minecraft:iron_nugget'])
+	]).transitionalItem('create:incomplete_precision_mechanism').loops(5) // 设置过渡物品和循环次数
+})
+神秘转换 (Mysterious Conversion)
+神秘转换配方放在 client_scripts/ 文件夹中，外部不在任何事件监听器内。当前唯一的方法是通过反射添加。
 
-
-### 神秘转换 (Mysterious Conversion)
-
-神秘转换配方放在 `client_scripts/` 文件夹中，外部不在任何事件监听器内。当前唯一的方法是通过反射添加。
-
-```javascript
 let $MysteriousItemConversionCategory = Java.loadClass('com.simibubi.create.compat.jei.category.MysteriousItemConversionCategory')
 let $ConversionRecipe = Java.loadClass('com.simibubi.create.compat.jei.ConversionRecipe')
 
-$MysteriousItemConversionCategory.RECIPES.add($ConversionRecipe.create('minecraft:apple', 'minecraft:carrot'))
-$MysteriousItemConversionCategory.RECIPES.add($ConversionRecipe.create('minecraft:golden_apple', 'minecraft:golden_carrot'))
+$MysteriousItemConversionCategory.RECIPES.add($ConversionRecipe.create('minecraft:apple', 'minecraft:carrot')) // 苹果转化为胡萝卜
+$MysteriousItemConversionCategory.RECIPES.add($ConversionRecipe.create('minecraft:golden_apple', 'minecraft:golden_carrot')) // 金苹果转化为金胡萝卜
 防止配方自动生成 (Preventing Recipe Auto-Generation)
 如果您不希望冶炼、爆炸、吸烟、合成或石切切割生成自动配方，可以在配方末尾加上 id:manual_only。
 
 ServerEvents.recipes(event => {
-	event.shapeless('minecraft:wet_sponge', ['minecraft:water_bucket', 'minecraft:sponge']).id('kubejs:moisting_the_sponge_manual_only')
+	event.shapeless('minecraft:wet_sponge', ['minecraft:water_bucket', 'minecraft:sponge']).id('kubejs:moisting_the_sponge_manual_only') // 配方标记为手动生成
 })
