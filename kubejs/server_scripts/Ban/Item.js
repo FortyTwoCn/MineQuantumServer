@@ -17,4 +17,6 @@ ServerEvents.recipes(event => {
     event.remove({output: 'appliedenergistics2:tiny_tnt'}); // 移除迷你TNT
     event.remove({output: 'ae2wtlib:infinity_booster_card'}); // 移除无线增幅卡
     event.remove({output: 'appliedenergistics2:network_tool'}); // 移除网络工具
+    // 时装工坊
+    event.remove({mod: 'armourers_workshop'})// 时装工坊mod
 })
