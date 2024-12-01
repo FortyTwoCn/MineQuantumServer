@@ -1,0 +1,75 @@
+ServerEvents.recipes(event => {
+    // 附魔设备配方
+    event.recipes.ars_nouveau.enchanting_apparatus(
+        ['minecraft:sand', 'minecraft:sand', 'minecraft:sand', 'minecraft:sand'], // 输入物品
+        'minecraft:gunpowder', // 试剂
+        'minecraft:tnt', // 输出物品
+        1000 // 能量消耗
+        // true // 保留试剂的 NBT 数据（类似于锻造配方）
+    )
+
+    // 附魔配方
+    event.recipes.ars_nouveau.enchantment(
+        ['minecraft:sand', 'minecraft:sand', 'minecraft:sand', 'minecraft:sand'], // 输入物品
+        'minecraft:vanishing_curse', // 附魔效果
+        1, // 附魔等级
+        1000 // 能量消耗
+    )
+
+    // 粉碎配方
+    event.recipes.ars_nouveau.crush(
+        'minecraft:tnt', // 输入物品（块）
+        [
+            Item.of('minecraft:sand').withChance(1.0)
+            //{ item: Item.of('minecraft:sand').withChance(1.0), maxRolls: 4 } // 可选的最大掉落次数
+        ] // 掉落表
+        // true // 是否在世界中掉落物品？
+    )
+
+    /*
+    // 这确实有效，但配方必须是有效的符文
+    // 在《魔法之书》中，所以这只能用于
+    // 替换符文的配方
+    event.recipes.ars_nouveau.glyph(
+        'minecraft:tnt', // 输出物品（符文）
+        ['minecraft:sand', 'minecraft:gunpowder'], // 输入物品
+        3 // 经验消耗
+    )
+    */
+
+    // 可通过 `/ars-tome id` 访问，这里是 `/ars-tome kubejs:not_glow`
+    event.recipes.ars_nouveau
+        .caster_tome(
+            'Not-Glow Trap', // 名称
+            [
+                'ars_nouveau:glyph_touch', // 法术符文
+                'ars_nouveau:glyph_rune',
+                'ars_nouveau:glyph_snare',
+                'ars_nouveau:glyph_extend_time',
+                'ars_nouveau:glyph_light'
+            ], // 法术符文
+            '不会捕捉目标并赋予其他目标发光效果。', // 描述
+            16718260, // 颜色（十六进制）
+            {
+                family: 'ars_nouveau:default', // 法术类别
+                pitch: 1.0, // 音高
+                volume: 1.0 // 音量
+            }
+        )
+        .id('kubejs:not_glow')
+
+    // 附魔配方
+    event.recipes.ars_nouveau.imbuement(
+        'minecraft:sand', // 输入物品
+        'minecraft:tnt', // 输出物品
+        1000, // 能量消耗
+        []
+    )
+
+    event.recipes.ars_nouveau.imbuement(
+        'minecraft:red_sand', // 输入物品
+        'minecraft:tnt', // 输出物品
+        1000, // 能量消耗
+        []
+    )
+})
