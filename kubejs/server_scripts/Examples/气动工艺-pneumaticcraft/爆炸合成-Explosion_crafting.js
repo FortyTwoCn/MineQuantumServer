@@ -19,7 +19,7 @@ onEvent('recipes', event => {
     event.custom({
         type: "pneumaticcraft:explosion_crafting",
           //输入 铁锭
-        "input": {
+        input: {
               tag: "forge:ingots/iron"
                  },
         //输出 压缩铁锭
