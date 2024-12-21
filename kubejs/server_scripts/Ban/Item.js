@@ -1,6 +1,6 @@
 ServerEvents.recipes(event => {
     //Alex的生物Alexsmobs
-    event.remove({output:'alexsmobs:enderiophage_rocket'}); // 移除末影噬菌体火箭
+    event.remove({id:'alexsmobs:enderiophage_rocket'}); // 移除末影噬菌体火箭
     //AE2
     event.remove({output: 'appliedenergistics2:spatial_pylon'}); // 移除空间塔
     event.remove({output: 'appliedenergistics2:spatial_io_port'}); // 移除空间io接口
