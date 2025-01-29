@@ -1,0 +1,783 @@
+//   ____                        _                     
+//  / __ \                      | |                    
+// | |  | | _   _   __ _  _ __  | |_  _   _  _ __ ___  
+// | |  | || | | | / _` || '_ \ | __|| | | || '_ ` _ \ 
+// | |__| || |_| || (_| || | | || |_ | |_| || | | | | |
+//  \___\_\ \__,_| \__,_||_| |_| \__| \__,_||_| |_| |_|
+//                                                     
+//														
+//隐藏重复矿物
+//BY FortyTwocn / 2024
+//
+//服务器没有的mod 不影响
+//silents_mechanisms
+//terraqueous
+//pedestals
+//assemblylinemachines
+//tinyredstone
+//geolosys
+onEvent('jei.hide.items', event => {
+//煤炭
+	//碳粉
+	event.hide('silents_mechanisms:coal_dust')
+	event.hide('mekanism:dust_coal')
+	event.hide('terraqueous:coal_dust')
+	//碳矿
+	event.hide('minecraft:coal_ore')
+//
+//铁
+	//铁粉
+	event.hide('immersiveengineering:dust_iron')
+	event.hide('silents_mechanisms:iron_dust')
+	event.hide('mekanism:dust_iron')
+	event.hide('pedestals:dustiron')
+	event.hide('mysticalworld:iron_dust')
+	event.hide('thermal:iron_dust')//热力系列
+	event.hide('occultism:iron_dust')
+	event.hide('terraqueous:iron_dust')
+	event.hide('appliedenergistics2:iron_dust')
+	//铁齿轮
+	event.hide('thermal:iron_gear')//热力系列
+	event.hide('titanium:iron_gear')
+	//铁板
+	event.hide('immersiveengineering:plate_iron')
+	event.hide('thermal:iron_plate')//热力系列
+	event.hide('create:iron_sheet')
+	//铁杆
+	event.hide('silentgear:iron_rod')
+	event.hide('immersiveengineering:stick_iron')
+	event.hide('buildersaddition:iron_rod')
+	event.hide('createaddition:iron_rod')
+	//铁矿
+	event.hide('minecraft:iron_ore')
+	event.hide('geolosys:iron_cluster')
+//
+//金
+	//金粉
+	event.hide('immersiveengineering:dust_gold')
+	event.hide('silents_mechanisms:gold_dust')
+	event.hide('mekanism:dust_gold')
+	event.hide('pedestals:dustgold')
+	event.hide('mysticalworld:gold_dust')
+	event.hide('thermal:gold_dust')//热力系列
+	event.hide('occultism:gold_dust')
+	event.hide('terraqueous:gold_dust')
+	event.hide('appliedenergistics2:gold_dust')
+	//金齿轮
+	event.hide('thermal:gold_gear')//热力系列
+	event.hide('titanium:gold_gear')
+	//金板
+	event.hide('thermal:gold_plate')//热力系列
+	event.hide('immersiveengineering:plate_gold')
+	//金杆
+	event.hide('immersiveposts:stick_gold')
+	event.hide('createaddition:gold_rod')
+	//金矿
+	event.hide('minecraft:gold_ore')
+	event.hide('minecraft:nether_gold_ore')
+	event.hide('geolosys:gold_cluster')
+	event.hide('geolosys:nether_gold_cluster')
+//
+//钻石
+	//钻石粉
+	event.hide('createaddition:diamond_grit')
+	event.hide('mekanism:dust_diamond')
+	event.hide('thermal:diamond_dust')//热力系列
+	event.hide('terraqueous:diamond_dust')
+	//钻石齿轮
+	event.hide('thermal:diamond_gear')//热力系列
+	event.hide('titanium:diamond_gear')
+	//钻石矿
+	event.hide('minecraft:diamond_ore')
+//
+//绿宝石
+	//绿宝石粉
+	event.hide('mekanism:dust_emerald')
+	event.hide('thermal:emerald_dust')//热力系列
+	event.hide('terraqueous:emerald_dust')
+	//绿宝石齿轮
+	event.hide('thermal:emerald_gear')//热力系列
+	//绿宝石矿
+	event.hide('minecraft:emerald_ore')
+//
+//青金石
+	//青金石粉
+	event.hide('thermal:lapis_dust')//热力系列
+	event.hide('mekanism:dust_lapis_lazuli')
+	//青金石齿轮
+	event.hide('thermal:lapis_lazuli_gear')//热力系列
+	//青金石板
+	event.hide('create:lapis_sheet')
+	//青金石矿
+	event.hide('minecraft:lapis_ore')
+//
+//下届石英
+	//下届石英粉
+	event.hide('mekanism:dust_quartz')
+	event.hide('thermal:quartz_dust')//热力系列
+	event.hide('appliedenergistics2:nether_quartz_dust')
+	//下届石英齿轮
+	event.hide('thermal:quartz_gear')//热力系列
+	//下届石英矿
+	event.hide('minecraft:nether_quartz_ore')
+//
+//铜
+	//铜锭
+	event.hide('silents_mechanisms:copper_ingot')
+	event.hide('tmechworks:copper_ingot')
+	event.hide('mekanism:ingot_copper')
+	event.hide('mysticalworld:copper_ingot')
+	event.hide('thermal:copper_ingot')//热力系列
+	event.hide('immersiveengineering:ingot_copper')
+	event.hide('occultism:copper_ingot')
+	event.hide('create:copper_ingot')
+	event.hide('tconstruct:copper_ingot')
+	event.hide('iceandfire:copper_ingot')
+	event.hide('routerreborn:copper_ingot')
+	event.hide('geolosys:copper_ingot')
+	event.hide('projectred-core:copper_ingot')
+	//铜块
+	event.hide('silents_mechanisms:copper_block')
+	event.hide('tmechworks:copper_block')
+	event.hide('mekanism:block_copper')
+	event.hide('mysticalworld:copper_block')
+	event.hide('thermal:copper_block')//热力系列
+	event.hide('immersiveengineering:storage_copper')
+	event.hide('occultism:copper_block')
+	event.hide('create:copper_block')
+	event.hide('tconstruct:copper_block')
+	event.hide('iceandfire:copper_block')
+	//铜粒
+	event.hide('silents_mechanisms:copper_nugget')
+	event.hide('tmechworks:copper_nugget')
+	event.hide('mekanism:nugget_copper')
+	event.hide('mysticalworld:copper_nugget')
+	event.hide('thermal:copper_nugget')//热力系列
+	event.hide('immersiveengineering:nugget_copper')
+	event.hide('occultism:copper_nugget')
+	event.hide('create:copper_nugget')
+	event.hide('tconstruct:copper_nugget')
+	event.hide('iceandfire:copper_nugget')
+	event.hide('geolosys:copper_nugget')
+	//铜粉
+	event.hide('immersiveengineering:dust_copper')
+	event.hide('silents_mechanisms:copper_dust')
+	event.hide('mekanism:dust_copper')
+	event.hide('pedestals:dustcopper')
+	event.hide('mysticalworld:copper_dust')
+	event.hide('thermal:copper_dust')//热力系列
+	event.hide('occultism:copper_dust')
+	//铜齿轮
+	event.hide('thermal:copper_gear')//热力系列
+	//铜板
+	event.hide('create:copper_sheet')
+	event.hide('thermal:copper_plate')//热力系列
+	event.hide('immersiveengineering:plate_copper')
+	//铜杆
+	event.hide('immersiveposts:stick_copper')
+	event.hide('createaddition:copper_rod')
+	//铜矿
+	event.hide('immersiveengineering:ore_copper')
+	event.hide('mekanism:copper_ore')
+	event.hide('create:copper_ore')
+	event.hide('thermal:copper_ore')//热力系列
+	event.hide('tmechworks:copper_ore')
+	event.hide('mysticalworld:copper_ore')
+	event.hide('silents_mechanisms:copper_ore')
+	event.hide('tconstruct:copper_ore')
+	event.hide('occultism:copper_ore')
+	event.hide('iceandfire:copper_ore')
+	event.hide('routerreborn:copper_ore')
+	event.hide('geolosys:copper_cluster')
+	event.hide('projectred-exploration:copper_ore')
+//
+//铝
+	//铝锭
+	event.hide('silents_mechanisms:aluminum_ingot')
+	event.hide('tmechworks:aluminum_ingot')
+	event.hide('immersiveengineering:ingot_aluminium')
+	event.hide('geolosys:aluminum_ingot')
+	//铝块
+	event.hide('silents_mechanisms:aluminum_block')
+	event.hide('tmechworks:aluminum_block')
+	event.hide('immersiveengineering:storage_aluminium')
+	//铝粒
+	event.hide('silents_mechanisms:aluminum_nugget')
+	event.hide('tmechworks:aluminum_nugget')
+	event.hide('immersiveengineering:nugget_aluminium')
+	event.hide('geolosys:aluminum_nugget')
+	//铝粉
+	event.hide('silents_mechanisms:aluminum_dust')
+	event.hide('pedestals:dustaluminum')
+	event.hide('immersiveengineering:dust_aluminium')
+	//铝板
+	event.hide('immersiveengineering:plate_aluminium')
+	//铝杆
+	event.hide('immersiveengineering:stick_aluminium')
+	//铝矿
+	event.hide('tmechworks:aluminum_ore')
+	event.hide('immersiveengineering:ore_aluminum')
+	event.hide('silents_mechanisms:bauxite_ore')
+	event.hide('geolosys:aluminum_cluster')
+//
+//银
+	//银锭
+	event.hide('silents_mechanisms:silver_ingot')
+	event.hide('mysticalworld:silver_ingot')
+	event.hide('thermal:silver_ingot')//热力系列
+	event.hide('immersiveengineering:ingot_silver')
+	event.hide('occultism:silver_ingot')
+	event.hide('iceandfire:silver_ingot')
+	event.hide('geolosys:silver_ingot')
+	event.hide('projectred-core:silver_ingot')
+	//银块
+	event.hide('silents_mechanisms:silver_block')
+	event.hide('mysticalworld:silver_block')
+	event.hide('thermal:silver_block')//热力系列
+	event.hide('immersiveengineering:storage_silver')
+	event.hide('occultism:silver_block')
+	event.hide('iceandfire:silver_block')
+	//银粒
+	event.hide('silents_mechanisms:silver_nugget')
+	event.hide('mysticalworld:silver_nugget')
+	event.hide('thermal:silver_nugget')//热力系列
+	event.hide('immersiveengineering:nugget_silver')
+	event.hide('occultism:silver_nugget')
+	event.hide('iceandfire:silver_nugget')
+	event.hide('geolosys:silver_nugget')
+	//银粉
+	event.hide('silents_mechanisms:silver_dust')
+	event.hide('mysticalworld:silver_dust')
+	event.hide('thermal:silver_dust')//热力系列
+	event.hide('immersiveengineering:dust_silver')
+	event.hide('occultism:silver_dust')
+	event.hide('pedestals:dustsilver')
+	//银齿轮
+	event.hide('thermal:silver_gear')//热力系列
+	//银板
+	event.hide('thermal:silver_plate')//热力系列
+	event.hide('immersiveengineering:plate_silver')
+	//银杆
+	event.hide('immersiveposts:stick_silver')
+	//银矿
+	event.hide('immersiveengineering:ore_silver')
+	event.hide('thermal:silver_ore')//热力系列
+	event.hide('mysticalworld:silver_ore')
+	event.hide('silents_mechanisms:silver_ore')
+	event.hide('occultism:silver_ore')
+	event.hide('iceandfire:silver_ore')
+	event.hide('geolosys:silver_cluster')
+	event.hide('projectred-exploration:silver_ore')
+//
+//铅
+	//铅锭
+	event.hide('silents_mechanisms:lead_ingot')
+	event.hide('mekanism:ingot_lead')
+	event.hide('mysticalworld:lead_ingot')
+	event.hide('thermal:lead_ingot')//热力系列
+	event.hide('immersiveengineering:ingot_lead')
+	event.hide('eidolon:lead_ingot')
+	event.hide('geolosys:lead_ingot')
+	//铅块
+	event.hide('silents_mechanisms:lead_block')
+	event.hide('mekanism:block_lead')
+	event.hide('mysticalworld:lead_block')
+	event.hide('thermal:lead_block')//热力系列
+	event.hide('immersiveengineering:storage_lead')
+	event.hide('eidolon:lead_block')
+	//铅粒
+	event.hide('silents_mechanisms:lead_nugget')
+	event.hide('mekanism:nugget_lead')
+	event.hide('mysticalworld:lead_nugget')
+	event.hide('thermal:lead_nugget')//热力系列
+	event.hide('immersiveengineering:nugget_lead')
+	event.hide('eidolon:lead_nugget')
+	event.hide('geolosys:lead_nugget')
+	//铅粉
+	event.hide('silents_mechanisms:lead_dust')
+	event.hide('mekanism:dust_lead')
+	event.hide('mysticalworld:lead_dust')
+	event.hide('thermal:lead_dust')//热力系列
+	event.hide('immersiveengineering:dust_lead')
+	event.hide('eidolon:lead_dust')
+	event.hide('pedestals:dustlead')
+	//铅齿轮
+	event.hide('thermal:lead_gear')//热力系列
+	//铅板
+	event.hide('thermal:lead_plate')//热力系列
+	event.hide('immersiveengineering:plate_lead')
+	//铅杆
+	event.hide('immersiveposts:stick_lead')
+	//铅矿
+	event.hide('immersiveengineering:ore_lead')
+	event.hide('mekanism:lead_ore')
+	event.hide('thermal:lead_ore')//热力系列
+	event.hide('mysticalworld:lead_ore')
+	event.hide('silents_mechanisms:lead_ore')
+	event.hide('eidolon:lead_ore')
+	event.hide('geolosys:lead_cluster')
+//
+//镍
+	//镍锭
+	event.hide('silents_mechanisms:nickel_ingot')
+	event.hide('thermal:nickel_ingot')//热力系列
+	event.hide('immersiveengineering:ingot_nickel')
+	event.hide('geolosys:nickel_ingot')
+	//镍块
+	event.hide('silents_mechanisms:nickel_block')
+	event.hide('thermal:nickel_block')//热力系列
+	event.hide('immersiveengineering:storage_nickel')
+	//镍粒
+	event.hide('silents_mechanisms:nickel_nugget')
+	event.hide('thermal:nickel_nugget')//热力系列
+	event.hide('immersiveengineering:nugget_nickel')
+	event.hide('geolosys:nickel_nugget')
+	//镍粉
+	event.hide('silents_mechanisms:nickel_dust')
+	event.hide('thermal:nickel_dust')//热力系列
+	event.hide('immersiveengineering:dust_nickel')
+	event.hide('pedestals:dustnickel')
+	//镍齿轮
+	event.hide('thermal:nickel_gear')//热力系列
+	//镍板
+	event.hide('thermal:nickel_plate')//热力系列
+	event.hide('immersiveengineering:plate_nickel')
+	//镍杆
+	event.hide('immersiveposts:stick_nickel')
+	//镍矿
+	event.hide('immersiveengineering:ore_nickel')
+	event.hide('thermal:nickel_ore')//热力系列
+	event.hide('silents_mechanisms:nickel_ore')
+	event.hide('geolosys:nickel_cluster')
+//
+//URANIUM
+	//铀锭
+	event.hide('silents_mechanisms:uranium_ingot')
+	event.hide('mekanism:ingot_uranium')
+	event.hide('immersiveengineering:ingot_uranium')
+	//铀块
+	event.hide('silents_mechanisms:uranium_block')
+	event.hide('mekanism:block_uranium')
+	event.hide('immersiveengineering:storage_uranium')
+	//铀粒
+	event.hide('silents_mechanisms:uranium_nugget')
+	event.hide('mekanism:nugget_uranium')
+	event.hide('immersiveengineering:nugget_uranium')
+	//铀粉
+	event.hide('silents_mechanisms:uranium_dust')
+	event.hide('mekanism:dust_uranium')
+	event.hide('immersiveengineering:dust_uranium')
+	event.hide('pedestals:dusturanium')
+	//铀板
+	event.hide('immersiveengineering:plate_uranium')
+	//铀杆
+	event.hide('immersiveposts:stick_uranium')
+	//铀矿
+	event.hide('immersiveengineering:ore_uranium')
+	event.hide('mekanism:uranium_ore')
+	event.hide('silents_mechanisms:uranium')
+	event.hide('geolosys:uranium_cluster')
+	event.hide('geolosys:yellorium_cluster')
+//
+//锇
+	//锇锭
+	event.hide('mekanism:ingot_osmium')
+	//锇块
+	event.hide('mekanism:block_osmium')
+	//锇粒
+	event.hide('mekanism:nugget_osmium')
+	//锇粉
+	event.hide('mekanism:dust_osmium')
+	event.hide('pedestals:dustosmium')
+	//锇矿
+	event.hide('mekanism:osmium_ore')
+	event.hide('geolosys:osmium_cluster')
+//
+//锡
+	//锡锭
+	event.hide('silents_mechanisms:tin_ingot')
+	event.hide('mekanism:ingot_tin')
+	event.hide('mysticalworld:tin_ingot')
+	event.hide('thermal:tin_ingot')//热力系列
+	event.hide('geolosys:tin_ingot')
+	event.hide('projectred-core:tin_ingot')
+	//锡块
+	event.hide('silents_mechanisms:tin_block')
+	event.hide('mekanism:block_tin')
+	event.hide('mysticalworld:tin_block')
+	event.hide('thermal:tin_block')//热力系列
+	//锡粒
+	event.hide('silents_mechanisms:tin_nugget')
+	event.hide('mekanism:nugget_tin')
+	event.hide('mysticalworld:tin_nugget')
+	event.hide('thermal:tin_nugget')//热力系列
+	event.hide('geolosys:tin_nugget')
+	//锡粉
+	event.hide('silents_mechanisms:tin_dust')
+	event.hide('mekanism:dust_tin')
+	event.hide('mysticalworld:tin_dust')
+	event.hide('thermal:tin_dust')//热力系列
+	event.hide('pedestals:dusttin')
+	//锡齿轮
+	event.hide('thermal:tin_gear')//热力系列
+	//锡板
+	event.hide('thermal:tin_plate')//热力系列
+	//锡矿
+	event.hide('mekanism:tin_ore')
+	event.hide('thermal:tin_ore')//热力系列
+	event.hide('mysticalworld:tin_ore')
+	event.hide('silents_mechanisms:tin_ore')
+	event.hide('geolosys:tin_cluster')
+	event.hide('projectred-exploration:tin_ore')
+//
+//锌
+	//锌锭
+	event.hide('silents_mechanisms:zinc_ingot')
+	event.hide('create:zinc_ingot')
+	event.hide('geolosys:zinc_ingot')
+	//锌块
+	event.hide('silents_mechanisms:zinc_block')
+	event.hide('create:zinc_block')
+	//锌粒
+	event.hide('silents_mechanisms:zinc_nugget')
+	event.hide('create:zinc_nugget')
+	event.hide('geolosys:zinc_nugget')
+	//锌粉
+	event.hide('silents_mechanisms:zinc_dust')
+	//锌板
+	event.hide('createaddition:zinc_sheet')
+	//锌矿
+	event.hide('create:zinc_ore')
+	event.hide('silents_mechanisms:zin_ore')
+	event.hide('geolosys:zinc_cluster')
+//
+//钴
+	//钴锭
+	event.hide('tconstruct:cobalt_ingot')
+	//钴块
+	event.hide('tconstruct:cobalt_block')
+	//钴粒
+	event.hide('tconstruct:cobalt_nugget')
+	//钴矿
+	event.hide('tconstruct:cobalt_ore')
+/*
+不用矿辞通用的水晶 用AE2的水晶
+//
+//赛特斯石英
+	//赛特斯石英水晶
+	event.hide('appliedenergistics2:certus_quartz_crystal')
+	//赛特斯石英粉
+	event.hide('appliedenergistics2:certus_quartz_dust')
+	//赛特斯石英矿
+	event.hide('appliedenergistics2:certus_quartz_ore')
+//
+//充能赛特斯石英
+	//充能赛特斯石英水晶
+	event.hide('appliedenergistics2:charged_certus_quartz_crystal')
+	//充能赛特斯石英矿
+	event.hide('appliedenergistics2:charged_certus_quartz_ore')
+//
+//福鲁伊克斯
+	//福鲁伊克斯水晶
+	event.hide('appliedenergistics2:fluix_crystal')
+	//福鲁伊克斯粉
+	event.hide('appliedenergistics2:fluix_dust')
+	/福鲁伊克斯块
+	event.hide('appliedenergistics2:fluix_block')
+*/
+//赛特斯石英
+	//赛特斯石英水晶
+	event.hide('emendatusenigmatica:certus_quartz_gem')
+	//赛特斯石英水晶粉
+	event.hide('emendatusenigmatica:certus_quartz_dust')
+	//赛特斯石英水晶矿
+	event.hide('appliedenergistics2:certus_quartz_ore')
+//
+//充能赛特斯石英
+	//充能赛特斯石英水晶 
+	event.hide('emendatusenigmatica:charged_certus_quartz_gem')
+	//充能赛特斯石英水晶矿
+	event.hide('appliedenergistics2:charged_certus_quartz_ore')
+//
+//福鲁伊克斯
+	//福鲁伊克斯水晶
+	event.hide('emendatusenigmatica:fluix_gem')
+	//福鲁伊克斯粉
+	event.hide('emendatusenigmatica:fluix_dust')
+	//福鲁伊克斯块
+	event.hide('emendatusenigmatica:fluix_block')
+//
+//氟石
+	//氟石
+	event.hide('mekanism:fluorite_gem')
+	//氟石
+	event.hide('mekanism:dust_fuorite')
+	//氟石
+	event.hide('mekanism:fluorite_ore')
+//
+//沥青
+	//沥青
+	event.hide('immersivepetroleum:bitumen')
+	event.hide('thermal:bitumen')//热力系列
+	//沥青块
+	event.hide('thermal:bitumen_block')//热力系列
+//
+//朱砂
+	//朱砂
+	event.hide('thermal:cinnabar')//热力系列
+	//朱砂块
+	event.hide('thermal:cinnabar_block')//热力系列
+	//朱砂粉
+	event.hide('thermal:cinnabar_dust')//热力系列
+	//朱砂矿
+	event.hide('thermal:cinnabar_ore')//热力系列
+//
+//磷灰石
+	//磷灰石
+	event.hide('thermal:apatite')//热力系列
+	//磷灰石块
+	event.hide('thermal:apatite_block')//热力系列
+	//磷灰石粉
+	event.hide('thermal:apatite_dust')//热力系列
+	//磷灰石矿
+	event.hide('thermal:apatite_ore')//热力系列
+//
+//硫磺
+	//硫磺
+	event.hide('thermal:sulfur')//热力系列
+	//硫磺块
+	event.hide('thermal:sulfur_block')//热力系列
+	//硫磺粉
+	event.hide('thermal:sulfur_dust')//热力系列
+	event.hide('immersiveengineering:dust_sulfur')
+	event.hide('mekanism:dust_sulfur')
+	event.hide('eidolon:sulfur')
+	//硫磺矿
+	event.hide('thermal:sulfur_ore')//热力系列
+//
+//硝酸钾
+	//硝酸钾
+	event.hide('thermal:niter')//热力系列
+	//硝酸钾块
+	event.hide('thermal:niter_block')//热力系列
+	//硝酸钾粉
+	event.hide('thermal:niter_dust')//热力系列
+//
+//魔源宝石
+	//魔源宝石
+	event.hide('ars_nouveau:mana_gem')
+	//魔源宝石块
+	event.hide('ars_nouveau:mana_gem_block')
+	//魔源宝石矿石
+	event.hide('ars_nouveau:arcane_ore')
+//
+//维度碎片
+  //event.hide('rftoolsbase:dimensionalshard')
+//
+//青铜
+	//青铜锭
+	event.hide('silents_mechanisms:bronze_ingot')
+	event.hide('mekanism:ingot_bronze')
+	event.hide('thermal:bronze_ingot')//热力系列
+	//青铜块
+	event.hide('silents_mechanisms:bronze_block')
+	event.hide('mekanism:block_bronze')
+	event.hide('thermal:bronze_block')//热力系列
+	//青铜粒
+	event.hide('silents_mechanisms:bronze_nugget')
+	event.hide('mekanism:nugget_bronze')
+	event.hide('thermal:bronze_nugget')//热力系列
+	//青铜粉
+	event.hide('silents_mechanisms:bronze_dust')
+	event.hide('mekanism:dust_bronze')
+	//青铜齿轮
+	event.hide('thermal:bronze_gear')//热力系列
+	//青铜板
+	event.hide('thermal:bronze_plate')//热力系列
+//
+//黄铜
+	//黄铜锭
+	event.hide('silents_mechanisms:brass_ingot')
+	event.hide('create:brass_ingot')
+	//黄铜块
+	event.hide('silents_mechanisms:brass_block')
+	event.hide('create:brass_block')
+	//黄铜粒
+	event.hide('silents_mechanisms:brass_nugget')
+	event.hide('create:brass_nugget')
+	//黄铜粉
+	event.hide('silents_mechanisms:brass_dust')
+	//黄铜板
+	event.hide('create:brass_sheet')
+	//黄铜杆
+	event.hide('createaddition:brass_rod')
+//
+//琥珀金
+	//琥珀金锭
+	event.hide('silents_mechanisms:electrum_ingot')
+	event.hide('thermal:electrum_ingot')//热力系列
+	event.hide('immersiveengineering:ingot_electrum')
+	//琥珀金块
+	event.hide('silents_mechanisms:electrum_block')
+	event.hide('thermal:electrum_block')//热力系列
+	event.hide('immersiveengineering:storage_electrum')
+	//琥珀金粒
+	event.hide('silents_mechanisms:electrum_nugget')
+	event.hide('thermal:electrum_nugget')//热力系列
+	event.hide('immersiveengineering:nugget_electrum')
+	//琥珀金粉
+	event.hide('silents_mechanisms:electrum_dust')
+	event.hide('immersiveengineering:dust_electrum')
+	//琥珀金齿轮
+	event.hide('thermal:electrum_gear')//热力系列
+	//琥珀金板
+	event.hide('thermal:electrum_plate')//热力系列
+	event.hide('immersiveengineering:plate_electrum')
+	//琥珀金杆
+	event.hide('immersiveposts:stick_electrum')
+//
+//康铜
+	//康铜锭
+	event.hide('thermal:constantan_ingot')//热力系列
+	event.hide('immersiveengineering:ingot_constantan')
+	//康铜块
+	event.hide('thermal:constantan_block')//热力系列
+	event.hide('immersiveengineering:storage_constantan')
+	//康铜粒
+	event.hide('thermal:constantan_nugget')//热力系列
+	event.hide('immersiveengineering:nugget_constantan')
+	//康铜粉
+	event.hide('immersiveengineering:dust_constantan')
+	//康铜齿轮
+	event.hide('thermal:constantan_gear')//热力系列
+	//康铜板
+	event.hide('thermal:constantan_plate')//热力系列
+	event.hide('immersiveengineering:plate_constantan')
+	//康铜杆
+	event.hide('immersiveposts:stick_constantan')
+//
+//钢
+	//钢锭
+	event.hide('silents_mechanisms:steel_ingot')
+	event.hide('mekanism:ingot_steel')
+	event.hide('assemblylinemachines:steel_ingot')
+	event.hide('immersiveengineering:ingot_steel')
+	//钢块
+	event.hide('silents_mechanisms:steel_block')
+	event.hide('mekanism:block_steel')
+	event.hide('assemblylinemachines:steel_block')
+	event.hide('immersiveengineering:storage_steel')
+	//钢粒
+	event.hide('silents_mechanisms:steel_nugget')
+	event.hide('mekanism:nugget_steel')
+	event.hide('assemblylinemachines:steel_nugget')
+	event.hide('immersiveengineering:nugget_steel')
+	//钢粉
+	event.hide('silents_mechanisms:steel_dust')
+	event.hide('mekanism:dust_steel')
+	event.hide('immersiveengineering:dust_steel')
+	//钢板
+	event.hide('immersiveengineering:plate_steel')
+	//钢杆
+	event.hide('immersiveengineering:stick_steel')
+//
+//殷钢
+	//殷钢锭
+	event.hide('silents_mechanisms:invar_ingot')
+	event.hide('thermal:invar_ingot')//热力系列
+	//殷钢块
+	event.hide('silents_mechanisms:invar_block')
+	event.hide('thermal:invar_block')//热力系列
+	//殷钢粒
+	event.hide('silents_mechanisms:invar_nugget')
+	event.hide('thermal:invar_nugget')//热力系列
+	//殷钢粉
+	event.hide('silents_mechanisms:invar_dust')
+	//殷钢齿轮
+	event.hide('thermal:invar_gear')//热力系列
+	//殷钢板
+	event.hide('thermal:invar_plate')//热力系列
+//
+//流明
+	//流明锭
+	event.hide('silents_mechanisms:lumium_ingot')//寂静机械
+	event.hide('thermal:lumium_ingot')//热力系列
+	//流明块
+	event.hide('silents_mechanisms:lumium_block')//寂静机械
+	event.hide('thermal:lumium_block')//热力系列
+	//流明粒
+	event.hide('silents_mechanisms:lumium_nugget')//寂静机械
+	event.hide('thermal:lumium_nugget')//热力系列
+	//流明粉
+	event.hide('silents_mechanisms:lumium_dust')//寂静机械
+	//流明齿轮
+	event.hide('thermal:lumium_gear')//热力系列
+	//流明板
+	event.hide('thermal:lumium_plate')//热力系列
+//
+//信素
+	//信素锭
+	event.hide('silents_mechanisms:signalum_ingot')//寂静机械
+	event.hide('thermal:signalum_ingot')//热力系列
+	//信素块
+	event.hide('silents_mechanisms:signalum_block')//寂静机械
+	event.hide('thermal:signalum_block')//热力系列
+	//信素粒
+	event.hide('silents_mechanisms:signalum_nugget')//寂静机械
+	event.hide('thermal:signalum_nugget')//热力系列
+	//信素粉
+	event.hide('silents_mechanisms:signalum_dust')//寂静机械
+	//信素齿轮
+	event.hide('thermal:signalum_gear')//热力系列
+	//信素板
+	event.hide('thermal:signalum_plate')//热力系列
+//
+//末影
+	//末影锭
+	event.hide('silents_mechanisms:enderium_ingot')//寂静机械
+	event.hide('thermal:enderium_ingot')//热力系列
+	//末影块
+	event.hide('silents_mechanisms:enderium_block')//寂静机械
+	event.hide('thermal:enderium_block')//热力系列
+	//末影粒
+	event.hide('silents_mechanisms:enderium_nugget')//寂静机械
+	event.hide('thermal:enderium_nugget')//热力系列
+	//末影粉
+	event.hide('silents_mechanisms:enderium_dust')//寂静机械
+	//末影齿轮
+	event.hide('thermal:enderium_gear')//热力系列
+	//末影板
+	event.hide('thermal:enderium_plate')//热力系列
+//
+//硅
+	//硅晶.
+	event.hide('appliedenergistics2:silicon')//应用能源
+	event.hide('tinyredstone:silicon') //TinyRedstone微小红石
+	event.hide('refinedstorage:silicon')//精致存储
+	//event.hide('emendatusenigmatica:silicon')
+//
+//焦煤
+	//Coal coke gem
+	event.hide('immersiveengineering:coal_coke')
+	event.hide('thermal:coal_coke')//热力系列
+	//Coal coke块
+	event.hide('immersiveengineering:coke')
+	event.hide('thermal:coal_coke_block')//热力系列
+	//煤焦粉
+	event.hide('immersiveengineering:dust_coke')
+//
+//煤粉
+	event.hide('lazierae2:coal_dust>')
+//
+//木炭
+	//木炭粉
+	event.hide('mekanism:dust_charcoal')
+	event.hide('assemblylinemachines:ground_charcoal')
+//
+//其他的
+	event.hide('minecraft:redstone_ore')
+	event.hide('geolosys:ancient_debris_cluster')
+//
+//end
+//
+})
