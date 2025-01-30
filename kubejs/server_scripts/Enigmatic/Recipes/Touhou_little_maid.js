@@ -1,0 +1,14 @@
+//   ____                        _                     
+//  / __ \                      | |                    
+// | |  | | _   _   __ _  _ __  | |_  _   _  _ __ ___  
+// | |  | || | | | / _` || '_ \ | __|| | | || '_ ` _ \ 
+// | |__| || |_| || (_| || | | || |_ | |_| || | | | | |
+//  \___\_\ \__,_| \__,_||_| |_| \__| \__,_||_| |_| |_|
+//                                                     
+//														
+//BY FortyTwocn / 2024
+//QQ:760450201
+onEvent('recipes', event => {
+    // 将音符盒替换为唱片机
+    event.replaceInput({ mod: 'touhou_little_maid', type: 'touhou_little_maid:altar_crafting' }, 'minecraft:note_block', 'minecraft:jukebox');
+});
