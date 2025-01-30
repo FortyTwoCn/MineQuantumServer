@@ -9,7 +9,7 @@
 //BY FortyTwocn / 2024
 //QQ:760450201
 onEvent('recipes', event => {
-	// 移除损坏的Mekanism粉碎/提纯配方
+	// 移除无效的Mekanism粉碎/提纯配方
 	event.remove({id: 'mekanism:compat/appliedenergistics2/fluix_crystal_to_dust'}) // 移除 Fluix 水晶转化为粉末的配方
 	event.remove({id: 'mekanism:compat/appliedenergistics2/certus_crystal_to_dust'}) // 移除 赛特斯水晶转化为粉末的配方
 	event.remove({id: 'mekanism:compat/appliedenergistics2/certus_crystal_purification'}) // 移除 赛特斯水晶的提纯配方
