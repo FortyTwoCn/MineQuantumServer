@@ -1,3 +1,14 @@
+//   #    #     #  #####  ######  
+//  # #   #     # #     # #     # 
+// #   #  #     # #       #     # 
+//#     # #     #  #####  ######  
+//#######  #   #        # #       
+//#     #   # #   #     # #       
+//#     #    #     #####  #       
+//
+//MATERIAL UNIFICATION SCRIPT
+//CREATED BY NEEPNOOP & ANOKKA / 2021
+//
 //   ____                        _                     
 //  / __ \                      | |                    
 // | |  | | _   _   __ _  _ __  | |_  _   _  _ __ ___  
@@ -11,7 +22,7 @@
 onEvent('recipes', event => {
 	// 这不是完全符合 Emendatus Enigmatica，但我们知道有些人可能会想要这个功能
 	event.replaceInput({}, 'immersiveengineering:slag', '#forge:slag')
-	// 这是 Emendatus Enigmatica 的部分功能
+	// 这是 Emendatus Enigmatica 的部分产物
 	event.replaceInput({}, 'immersiveengineering:coal_coke', '#forge:gems/coal_coke')
 	event.replaceInput({}, '#forge:coal_coke', '#forge:gems/coal_coke')
 
