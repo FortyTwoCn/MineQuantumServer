@@ -17,7 +17,7 @@
 //  \___\_\ \__,_| \__,_||_| |_| \__| \__,_||_| |_| |_|
 //                                                     
 //														
-//BY FortyTwocn / 2024
+//CHANGED BY FortyTwocn / 2024
 //QQ:760450201
 onEvent('recipes', event => {
 	event.remove({id: 'appliedenergistics2:smelting/silicon'})
