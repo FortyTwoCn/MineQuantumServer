@@ -767,7 +767,7 @@ onEvent('jei.hide.items', event => {
 	event.hide('immersiveengineering:dust_coke')
 //
 //煤粉
-	event.hide('lazierae2:coal_dust>')
+	event.hide('lazierae2:coal_dust')
 //
 //木炭
 	//木炭粉
