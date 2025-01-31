@@ -17,7 +17,7 @@
 //  \___\_\ \__,_| \__,_||_| |_| \__| \__,_||_| |_| |_|
 //                                                     
 //														
-//BY FortyTwocn / 2024
+//CHANGED BY FortyTwocn / 2024
 //QQ:760450201
 onEvent('recipes', event => {
 	// 移除无效的Mekanism粉碎/提纯配方
