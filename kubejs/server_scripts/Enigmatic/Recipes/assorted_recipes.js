@@ -1,20 +1,11 @@
-//   ____                        _                     
-//  / __ \                      | |                    
-// | |  | | _   _   __ _  _ __  | |_  _   _  _ __ ___  
-// | |  | || | | | / _` || '_ \ | __|| | | || '_ ` _ \ 
-// | |__| || |_| || (_| || | | || |_ | |_| || | | | | |
-//  \___\_\ \__,_| \__,_||_| |_| \__| \__,_||_| |_| |_|
-//                                                     
-//														
-//BY FortyTwocn / 2024
-//QQ:760450201
+	
 onEvent('recipes', event => {
 	//锯末
 	event.replaceInput({}, '#forge:dusts/wood', 'emendatusenigmatica:wood_dust')
-    event.replaceInput({}, '#forge:sawdust', 'emendatusenigmatica:wood_dust')
-    event.replaceInput({}, 'immersiveengineering:dust_wood', 'emendatusenigmatica:wood_dust')
-    event.replaceInput({}, 'mekanism:sawdust', 'emendatusenigmatica:wood_dust')
-    event.replaceInput({}, 'thermal:sawdust', 'emendatusenigmatica:wood_dust')
+	event.replaceInput({}, '#forge:sawdust', 'emendatusenigmatica:wood_dust')
+	event.replaceInput({}, 'immersiveengineering:dust_wood', 'emendatusenigmatica:wood_dust')
+	event.replaceInput({}, 'mekanism:sawdust', 'emendatusenigmatica:wood_dust')
+	event.replaceInput({}, 'thermal:sawdust', 'emendatusenigmatica:wood_dust')
 
     //末影珍珠粉
 	event.replaceInput({}, '#forge:dusts/ender', 'emendatusenigmatica:ender_dust')
