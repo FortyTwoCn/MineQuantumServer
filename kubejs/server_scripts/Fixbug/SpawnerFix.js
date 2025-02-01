@@ -1,15 +1,19 @@
-//   ____                        _                     
-//  / __ \                      | |                    
+//   ____		_	         
+//  / __ \	          | |	        
 // | |  | | _   _   __ _  _ __  | |_  _   _  _ __ ___  
 // | |  | || | | | / _` || '_ \ | __|| | | || '_ ` _ \ 
 // | |__| || |_| || (_| || | | || |_ | |_| || | | | | |
 //  \___\_\ \__,_| \__,_||_| |_| \__| \__,_||_| |_| |_|
-//                                                     
+//				     
 //														
-//BY FortyTwocn / 2024
+//BY FortyTwocn / 2025
 //QQ:760450201
-//修复机械手绕过权限与特定方块交互
+//修复机械手无人机绕过权限与特定方块交互
 //blocklist里添加 方块id 即可禁止特定触发方式以外的右键
+var banblocklist = [
+    'minecraft:spawner',
+    'draconicevolution:stabilized_spawner'
+];
 onEvent('block.right_click', event => {
     // 机械手右键操作
     if (banblocklist.indexOf(event.block.id) != -1 && event.getEntity() == 'Deployer') {
