@@ -18,6 +18,7 @@ onEvent('recipes', event => {
     event.shapeless('appliedenergistics2:ender_dust', [
         'emendatusenigmatica:ender_dust'
     ]);
+    event.remove({id:'emendatusenigmatica:alloy_dust/enderium'});
 // 石英粉合成
     event.shapeless('emendatusenigmatica:quartz_dust', [
         'appliedenergistics2:nether_quartz_dust'
