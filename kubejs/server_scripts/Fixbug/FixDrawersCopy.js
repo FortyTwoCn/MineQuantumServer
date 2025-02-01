@@ -1,3 +1,4 @@
+//原项目地址https://github.com/middlewhite/FixCopy/blob/main/main/fixcopy.js
 //修复抽屉破坏会复制物品
 //blocklist里添加 方块id （方块的！不是物品id！）即可禁止特定触发方式以外的破坏
 var blocklist = [
