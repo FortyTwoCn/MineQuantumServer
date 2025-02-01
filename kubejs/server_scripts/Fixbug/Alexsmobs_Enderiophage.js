@@ -6,12 +6,13 @@
 //  \___\_\ \__,_| \__,_||_| |_| \__| \__,_||_| |_| |_|
 //                                                     
 //														
-//BY FortyTwocn / 2024
+//BY FortyTwocn / 2025
 //QQ:760450201
+// 将末影噬菌体火箭的掉落物替换为末影噬菌体火箭
 onEvent('lootjs', event => {
-    // 将末影噬菌体火箭的掉落物替换为
     event.addEntityLootModifier('alexsmobs:enderiophage')
-        .replace('alexsmobs:capsid', 'alexsmobs:enderiophage_rocket');
+        // 先移除原有的掉落物
+        .removeLoot('alexsmobs:capsid')
+        // 添加新的掉落物
+        .addLoot('alexsmobs:enderiophage_rocket');
 });
-
-// 注意:此文件无用 原因未知
