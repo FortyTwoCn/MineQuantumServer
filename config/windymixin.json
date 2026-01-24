@@ -1,0 +1,15 @@
+{
+  "flat_world": {
+    "biome": "plains",
+    "layers": [
+      { "block": "minecraft:bedrock", "from": -64, "to": -64 },
+      { "block": "minecraft:dirt", "from": -63, "to": 2 },
+      { "block": "minecraft:grass_block", "from": 3, "to": 5 }
+    ],
+    "allowed_blocks": [
+      "minecraft:bedrock",
+      "minecraft:dirt",
+      "minecraft:grass_block"
+    ]
+  }
+}

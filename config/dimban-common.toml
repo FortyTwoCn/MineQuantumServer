@@ -1,0 +1,12 @@
+[DimBan]
+	DimensionsToBan = ["iceandfire:dread_land", "ae2:spatial_storage"]
+	#Where will the player go if their current dimension is banned.
+	WhereToGo = "minecraft:overworld"
+#iceandfire:dread_land
+#ae2:spatial_storage
+
+#eternal_starlight:starlight
+#minecraft:the_end
+#minecraft:the_nether
+#twilightforest:twilight_forest_type
+#minecraft:overworld

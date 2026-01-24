@@ -1,0 +1,18 @@
+#Schematic Fix Mod Configuration
+[general]
+	#Enable file watcher for schematic uploads
+	enableFileWatcher = true
+	#Interval in milliseconds to check file stability
+	# Default: 200
+	# Range: 50 ~ 5000
+	stableCheckInterval = 2000
+	#Maximum time in milliseconds to consider a file stable
+	# Default: 500
+	# Range: 100 ~ 10000
+	maxStableTime = 5000
+	#Automatically clean detected anomalies
+	autoCleanAnomalies = true
+	#Backup anomalous files to anomaly directory
+	backupAnomalousFiles = true
+	#List of banned keywords that will cause immediate file deletion when found in NBT
+	bannedKeywords = ["clickEvent", "run_command", "create:filter", "create:attribute_filter", "minecraft:bedrock", "minecraft:command_block", "minecraft:chain_command_block", "minecraft:repeating_command_block", "iceandfire:gold_pile", "iceandfire:silver_pile", "iceandfire:copper_pile", "minecraft:jigsaw", "twilightforest:giant_log", "twilightforest:giant_leaves", "twilightforest:giant_obsidian", "twilightforest:giant_cobblestone", "create:clipboard", "draconicevolution:creative_op_capacitor", "ae2:creative_energy_cell", "immersiveengineering:capacitor_creative", "mekanism:creative_fluid_tank", "mekanism:creative_energy_cube", "mekanism:creative_bin", "storagedrawers:creative_vending_upgrade", "pneumaticcraft:creative_compressor", "pneumaticcraft:creative_compressed_iron_block", "create:creative_fluid_tank", "create:creative_crate", "createaddition:creative_energy", "create:creative_motor", "industrialupgrade:creative_blocks/creative_mfsu", "industrialupgrade:creative_blocks/creative_radiation_storage", "industrialupgrade:creative_blocks/creative_tank_storage", "industrialupgrade:creative_blocks/creative_solarium_storage", "industrialupgrade:creative_blocks/creative_steam_storage", "industrialupgrade:creative_blocks/creative_quantum_storage"]

@@ -1,0 +1,11 @@
+{
+  "hamstersInWheelTime": 60,
+  "hamstersRestTime": 120,
+  "hamstersFeedingInterval": 300,
+  "hamstersSleepDuringTheDay": true,
+  "hamstersSleepAtNight": false,
+  "hamstersSquish": true,
+  "jumpHurtsHamsters": false,
+  "hamstersBurst": false,
+  "hamstersBurstStyle": "CONFETTI"
+}
